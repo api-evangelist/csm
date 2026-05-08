@@ -3,7 +3,10 @@ url: https://raw.githubusercontent.com/api-evangelist/csm/refs/heads/main/apis.y
 name: Common Sense Machines
 x-type: company
 description: >-
-  Common Sense Machines (CSM) builds 3D world models with image-to-3D and 3D world simulation APIs aimed at games, robotics, and synthetic data.
+  Common Sense Machines (CSM) builds 3D world models with image-to-3D and 3D world
+  simulation APIs aimed at games, robotics, and synthetic data. The CSM Cube product
+  family released a single-click model pipeline with mesh-parts-based topology in early
+  2026. API access is bundled with mid-tier and enterprise CSM subscription plans.
 image: https://kinlane-productions.s3.amazonaws.com/apis-json/apis-json-logo.jpg
 tags:
   - AI
@@ -11,13 +14,40 @@ tags:
   - World Models
   - Scene Generation
   - Generative
+  - Robotics
 created: '2026-05-08'
 modified: '2026-05-08'
 specificationVersion: '0.19'
-apis: []
+apis:
+  - aid: csm:platform
+    name: CSM 3D Generation API
+    description: >-
+      REST API for image-to-3D, text-to-3D, and 3D world generation/simulation. API access
+      is gated by CSM subscription plan tier. Documentation at https://docs.csm.ai/.
+    image: https://kinlane-productions.s3.amazonaws.com/apis-json/apis-json-logo.jpg
+    humanURL: https://docs.csm.ai/
+    baseURL: https://api.csm.ai
+    tags:
+      - 3D Generation
+      - Image-to-3D
+      - World Models
+      - Mesh Parts
+    properties:
+      - type: Documentation
+        url: https://docs.csm.ai/
+      - type: SignUp
+        url: https://3d.csm.ai/
+      - type: ProductPage
+        url: https://www.csm.ai/
+      - type: GitHub
+        url: https://github.com/CommonSenseMachines
 common:
   - type: Website
     url: https://www.csm.ai/
+  - type: Documentation
+    url: https://docs.csm.ai/
+  - type: GitHub
+    url: https://github.com/CommonSenseMachines
   - type: Plans
     url: plans/csm-plans-pricing.yml
   - type: RateLimits

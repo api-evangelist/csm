@@ -5,7 +5,7 @@ provider: Common Sense Machines
 providerId: csm
 created: '2026-05-08'
 modified: '2026-05-08'
-reconciled: false
+reconciled: partial
 tags:
 - AI
 - 3D
@@ -15,10 +15,14 @@ tags:
 - FinOps
 - Cost Management
 - FOCUS
-description: FOCUS-aligned FinOps placeholder for Common Sense Machines. Pipeline will replace with real billing details.
-notes: Initial scaffold — billing model has not yet been reconciled.
+description: >-
+  FOCUS-aligned FinOps view of Common Sense Machines. CSM bills as Cube subscription tiers
+  with API access bundled into mid-tier and enterprise plans. Per-API rate sheet is not
+  openly published; track generation count via CSM dashboard.
+notes: Plan tier choice (Cube mid-tier vs Enterprise) is the dominant cost lever; per-call rates not public.
 sources:
 - https://www.csm.ai/
+- https://docs.csm.ai/
 - https://focus.finops.org/focus-specification/v1-3/
 alignedWith:
   framework: FinOps Foundation Framework
@@ -29,38 +33,45 @@ alignedWith:
 publisherName: Common Sense Machines
 serviceCategory: AI
 billingModel:
-  pricingCategory: To Be Reconciled
+  pricingCategory: Subscription with Plan-Gated API Access
   billingFrequency: Monthly
   billingCurrency: USD
   chargeCategories:
-  - Usage
   - Purchase
+  - Usage
   - Adjustment
 focusColumns:
-  ServiceName: Common Sense Machines
+  ServiceName: CSM 3D Generation API
   ServiceCategory: AI
   ProviderName: Common Sense Machines
   PublisherName: Common Sense Machines
   InvoiceIssuerName: Common Sense Machines
   BillingCurrency: USD
-  ChargeCategory: Usage
+  ChargeCategory: Purchase
 meters:
-- name: api_usage
-  description: Catch-all meter pending reconciliation.
-  unit: varies
+- name: cube_subscription
+  description: Cube plan tier seats / subscription fee.
+  unit: seat-month
+  aggregation: max
+  dimensions:
+  - account
+  - plan
+- name: 3d_generations
+  description: 3D model generations performed via API.
+  unit: generation
   aggregation: sum
   dimensions:
   - account
-  - resource
+  - model_pipeline
 principles:
 - name: Visibility
-  description: Pull provider invoices or usage exports until a self-serve usage feed is documented.
+  description: Track generations and plan tier in CSM dashboard.
 - name: Allocation
-  description: Tag invoice line items to consuming business units in your FinOps store.
+  description: Tag generations per consuming game/robotics/synthetic-data product.
 - name: Optimization
-  description: Levers depend on the provider's billing model; review at renewal once reconciled.
+  description: Move to Enterprise when production volume exceeds Cube mid-tier limits.
 - name: Accountability
-  description: Assign a contract owner to review billing against negotiated terms.
+  description: Assign budget owner per consuming workspace.
 maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com
