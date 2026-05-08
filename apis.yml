@@ -1,0 +1,29 @@
+aid: csm
+url: https://raw.githubusercontent.com/api-evangelist/csm/refs/heads/main/apis.yml
+name: Common Sense Machines
+x-type: company
+description: >-
+  Common Sense Machines (CSM) builds 3D world models with image-to-3D and 3D world simulation APIs aimed at games, robotics, and synthetic data.
+image: https://kinlane-productions.s3.amazonaws.com/apis-json/apis-json-logo.jpg
+tags:
+  - AI
+  - 3D
+  - World Models
+  - Scene Generation
+  - Generative
+created: '2026-05-08'
+modified: '2026-05-08'
+specificationVersion: '0.19'
+apis: []
+common:
+  - type: Website
+    url: https://www.csm.ai/
+  - type: Plans
+    url: plans/csm-plans-pricing.yml
+  - type: RateLimits
+    url: rate-limits/csm-rate-limits.yml
+  - type: FinOps
+    url: finops/csm-finops.yml
+maintainers:
+  - FN: Kin Lane
+    email: kin@apievangelist.com
