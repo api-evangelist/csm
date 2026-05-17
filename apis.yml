@@ -1,7 +1,7 @@
 aid: csm
 url: https://raw.githubusercontent.com/api-evangelist/csm/refs/heads/main/apis.yml
 name: Common Sense Machines
-x-type: company
+kind: company
 description: >-
   Common Sense Machines (CSM) builds 3D world models with image-to-3D and 3D world
   simulation APIs aimed at games, robotics, and synthetic data. The CSM Cube product
