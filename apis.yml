@@ -42,6 +42,8 @@ apis:
       - type: GitHub
         url: https://github.com/CommonSenseMachines
 common:
+  - type: LinkedIn
+    url: https://www.linkedin.com/company/common-sense-machines
   - type: Website
     url: https://www.csm.ai/
   - type: Documentation
