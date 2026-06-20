@@ -7,7 +7,7 @@ description: >-
   simulation APIs aimed at games, robotics, and synthetic data. The CSM Cube product
   family released a single-click model pipeline with mesh-parts-based topology in early
   2026. API access is bundled with mid-tier and enterprise CSM subscription plans.
-image: https://kinlane-productions.s3.amazonaws.com/apis-json/apis-json-logo.jpg
+image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
 tags:
   - AI
   - 3D
@@ -24,7 +24,7 @@ apis:
     description: >-
       REST API for image-to-3D, text-to-3D, and 3D world generation/simulation. API access
       is gated by CSM subscription plan tier. Documentation at https://docs.csm.ai/.
-    image: https://kinlane-productions.s3.amazonaws.com/apis-json/apis-json-logo.jpg
+    image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
     humanURL: https://docs.csm.ai/
     baseURL: https://api.csm.ai
     tags:
