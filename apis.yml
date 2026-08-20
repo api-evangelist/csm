@@ -21,6 +21,13 @@ accessModel:
   method: derived
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/csm.png
 tags:
+  - Artificial Intelligence
+  - 3D
+  - World Models
+  - Scene Generation
+  - Generative
+  - Robotics
+tags_raw:
   - AI
   - 3D
   - World Models
