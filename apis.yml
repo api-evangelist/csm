@@ -7,6 +7,17 @@ description: >-
   simulation APIs aimed at games, robotics, and synthetic data. The CSM Cube product
   family released a single-click model pipeline with mesh-parts-based topology in early
   2026. API access is bundled with mid-tier and enterprise CSM subscription plans.
+deliveryModel:
+  model: saas
+  open_source: false
+  commercial: true
+  callable_host: false
+  label: Hosted service · you call their endpoint
+  confidence: medium
+  source:
+  - pricing
+  generated: '2026-08-28'
+  method: derived
 accessModel:
   pricing: freemium
   onboarding: unknown
